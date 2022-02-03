@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shadow_1"
+
+
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/idIVBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_shadow_1"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <EditText
+                android:id="@+id/etCityName"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="70"
+                android:background="@drawable/border_edittext"
+                android:hint="City name"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="@color/white"
+
+                android:textColorHint="@color/white" />
+
+
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="30"
+                android:background="@android:color/transparent"
+                android:src="@drawable/serach_icon"
+                app:tint="@color/white">
+
+            </ImageView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:id="@+id/iconWeather"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+
+
+                    tools:src="@drawable/icon02d" />
+
+                <TextView
+                    android:id="@+id/idtvmist"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+
+                    tools:text="mist">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/idtvTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:text="20 °C" />
+
+                <TextView
+                    android:id="@+id/tvCityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:text="Delhi India" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:id="@+id/idtvtodayweather"
+            android:visibility="invisible"
+            android:layout_marginTop="40dp"
+            android:text="Today Weather Forecast">
+
+        </TextView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/idweatherRv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+
+            >
+
+            <ImageView
+                android:id="@+id/btnshare"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_share"
+                android:visibility="invisible"
+
+                app:tint="@color/red">
+
+            </ImageView>
+
+
+            <ImageView
+                android:id="@+id/btnsee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/location"
+
+
+                app:tint="@color/red">
+
+            </ImageView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
